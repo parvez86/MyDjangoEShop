@@ -1,0 +1,27 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+	<div class="card mb-3" style="max-height:100vh">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src={{product.imageURL}} class="img-fluid rounded-start" alt="Single Product" width={450} height={400}>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+              <h5 class="text-bold display-5 text-uppercase">{{product.name}}</h5>
+              <h5 class="card-text">Digital: {{product.digital}}</h5>
+              <h5 class="display-6 fw-bold my-4">${{product.price}}</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+            </div>
+          <hr/>
+                    <div class="product">
+                        <button data-product="{{product.id}}" data-action="add" class="btn btn-dark text-white btn-outline-danger add-btn update-cart py--5">Add to cart</button>
+                        <a href="{% url 'cart' %}"><button class='btn btn-success text-white btn-outline-dark update-cart py--5'>Go to cart</button></a>
+                    </div>
+                    </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock content %}
