@@ -89,11 +89,10 @@
 				<img  id="cart-icon" src="{% static 'images/cart.png' %}">
 			</a>
 			{% if cartItems != None %}
-				<p id="cart-total" class="cart-total">{{cartItems}}</p>
+				<p id="cart-total" class="cart-total text-white fw-bold">{{cartItems}}</p>
 			{% else %}
-				<p id="cart-total1" class="cart-total text-danger fw-bold"></p>
+				<p id="cart-total1" class="cart-total text-white fw-bold">0</p>
 			{% endif %}
-
 	    </div>
 	  </div>
 	</nav>

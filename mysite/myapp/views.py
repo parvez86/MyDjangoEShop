@@ -106,6 +106,7 @@ def single_product(request, id):
 
 def updateItem(request):
     data = json.loads(request.body)
+    print(data)
     productId = data['productId']
     action = data['action']
     print('Action:', action)
