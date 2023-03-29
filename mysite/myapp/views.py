@@ -58,7 +58,7 @@ def logout_request(request):
     return redirect("login")
 
 
-@login_required
+# @login_required
 def store(request):
     data = cartData(request)
 
@@ -71,7 +71,7 @@ def store(request):
     return render(request, 'store/store.html', context)
 
 
-@login_required
+# @login_required
 def cart(request):
     data = cartData(request)
 
@@ -95,7 +95,7 @@ def checkout(request):
     return render(request, 'store/checkout.html', context)
 
 
-@login_required
+# @login_required
 def single_product(request, id):
     print("id:", id)
     product = Product.objects.get(id=id)
